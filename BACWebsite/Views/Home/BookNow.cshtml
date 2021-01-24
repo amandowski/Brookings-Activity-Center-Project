@@ -1,0 +1,32 @@
+﻿@model BookNowViewModel
+
+<p>Book us for your next event!</p>
+<div class="text-center">
+    <form class="book-now" method="post">
+    <!--<div asp-validation-summary="ModelOnly"></div>-->
+    <input class="form-control" asp-for="Name" placeholder="Name*" />
+    <!--<span asp-validation-for="Name"></span>-->
+        <br />
+        <div class="form-group">
+            <input type="email" class="form-control" asp-for="Email" placeholder="Email Address*" />
+        </div>
+        <!--<span asp-validation-for="Email"></span>-->
+        <br />
+        <div>
+            <input type="tel" class="form-control" asp-for="Phone" placeholder="Phone Number*" />
+        </div>
+        <span asp-validation-for="Phone"></span>
+        <br />
+        <div>
+            <input type="date" class="form-control" asp-for="Date" placeholder="Desired Date*" />
+        </div>
+        <!--<span asp-validation-for="Date"></span>-->
+        <br />
+        <div>
+            <textarea id="description" rows="10" asp-for="Description" placeholder="Tell us about your Event!!(500 Characters)*"></textarea>
+        </div>
+    <!--<span asp-validation-for="Description"></span>-->
+        <br />
+        <button>Send Email</button>
+    </form>
+</div>

@@ -1,0 +1,23 @@
+﻿@model MenuItemListViewModel
+<div class="text-center">
+    <header>
+        <h1>Catering</h1>
+    </header>
+    <div>
+        <p>
+            Explore our delish menu! Vegan? Gluten Free? Pescatarian? We have options for everybody!
+            See what we what dining experience we can bring to your next event right here.
+        </p>
+    </div>
+</div>
+
+@foreach (var item in Model.MenuItems)
+{
+    <div class="cater-form">
+        <img src="@item.PicPath" alt="@item.DishName">
+        <h5 class="pull-right">Cost/Dish: @item.DishCost.ToString("c")</h5>
+        <h5>Dish name: @item.DishName</h5>
+        <br />
+    </div>
+    <br />
+}
